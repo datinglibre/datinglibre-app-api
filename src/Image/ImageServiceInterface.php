@@ -12,4 +12,5 @@ interface ImageServiceInterface
     public function save(Uuid $userId, string $path, int $width, int $height, string $type, bool $isProfile): void;
     /** @return ImageInterface[]  */
     public function findAllByUser(Uuid $userId): array;
+    public function deleteByUserAndImageId(Uuid $userId, Uuid $imageId): void;
 }

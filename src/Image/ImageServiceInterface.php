@@ -10,4 +10,6 @@ interface ImageServiceInterface
 {
     /** @throws ImageUploadException  */
     public function save(Uuid $userId, string $path, int $width, int $height, string $type, bool $isProfile): void;
+    /** @return ImageInterface[]  */
+    public function findAllByUser(Uuid $userId): array;
 }
